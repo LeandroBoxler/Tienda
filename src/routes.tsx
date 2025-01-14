@@ -1,8 +1,8 @@
 import React from "react";
-import { Home } from "./components/home";
-import { Detail } from "./components/detail";
-import { Register } from "./components/register";
-import { Login } from "./components/login";
+import { Home } from "./page/home";
+import { Detail } from "./page/detail";
+import { Register } from "./page/register";
+import { Login } from "./page/login";
 
 interface RouteConfig {
   path: string;
