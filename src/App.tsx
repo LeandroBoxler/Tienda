@@ -1,22 +1,19 @@
-import { Detail } from "./components/detail"
-import { Header } from "./components/header"
-import { Home } from "./components/home"
-import { Login } from "./components/login"
-import { Register } from "./components/register"
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { routes } from "./routes";
+import { Header } from "./components/header";
 
-
-function App() {
-  
-
+const App: React.FC = () => {
   return (
-    <>
-    <Header/>
-    <Register/>
-    <Login/>
-    <Home/>
-    <Detail/> 
-    </>
-  )
-}
+    <Router>
+      <Header />
+      <Routes>
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element} />
+        ))}
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
